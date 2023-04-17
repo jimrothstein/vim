@@ -18,7 +18,7 @@ vim.opt.relativenumber = true -- test only, already set to true by lazyv
 vim.opt.number = true
 vim.cmd([[ set background=dark]])
 vim.cmd([[ set clipboard+=unnamedplus]])
-vim.cmd([[ set listchars=tab:<->]])
+vim.g.listchars = "tab:>-,space:="
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -34,7 +34,6 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
 --  TODO
-vim.g.listchars = "tab:>,space:."
 
 vim.g.R_assign = 2 --  turn off netrw (`let g:loaded_netrw = 1`)
 vim.g.loaded_netrw = 0
