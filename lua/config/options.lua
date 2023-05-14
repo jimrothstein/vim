@@ -2,6 +2,8 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 --
+--  As of 22 APR 2023
+--
 --  REF         ThePrimeagen
 --
 print("hello: nvim/config/options.lua")
@@ -11,15 +13,17 @@ print("hello: nvim/config/options.lua")
 vim.g.mapleader = " "
 -- Primegean likes
 
+-- vim.opt.guicursor = "" (I don't like)
 -- remains block in insert mode
-vim.opt.guicursor = ""
 
 vim.opt.relativenumber = true -- test only, already set to true by lazyv
 vim.opt.number = true
-vim.cmd([[ set background=dark]])
+vim.cmd([[ set background=light]])
 vim.cmd([[ set clipboard+=unnamedplus]])
+vim.cmd([[ syntax on]])
 vim.g.listchars = "tab:>-,space:="
 
+vim.opt.conceallevel = 0 -- show chunk markers
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
