@@ -5,7 +5,18 @@ return {
     -- {"<leader>/", false},
     -- change a keymap
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files in cwd" },
+
+    -- jr added:
+    {
+      "<leader>fz",
+      function()
+        require("telescope.builtin").find_files({ cwd = "~" })
+      end,
+      desc = "HOME ...",
+    },
+
     -- add a keymap to browse plugin files
+    --
     {
       "<leader>fp",
       function()

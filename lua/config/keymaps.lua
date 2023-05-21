@@ -9,17 +9,24 @@
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.e)
 -- TODO:  > line 20, several good ex of "which-key", but ERRORs
 
-local builtin = require("telescope.builtin")
+local builtin = require("telescope.builtin")(
+  -- vim.keymap.set("n", "ppf", builtin.find_files({}))
 
--- vim.keymap.set("n", "ppf", builtin.find_files({}))
+  -- vim.keymap.set("n", "<Leader>ps", function()
+  -- builtin.grep_string({ search = vim.fn.input("Grep > ") })
+  -- end)
+  --
+  -- Primeagan -  reverses two lines (driving me crazy)
+  -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+  -- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- vim.keymap.set("n", "<Leader>ps", function()
--- builtin.grep_string({ search = vim.fn.input("Grep > ") })
--- end)
---
--- Primeagan -  reverses two lines (driving me crazy)
--- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+  --  open Telescope in $HOME
+  --
+)
+
+vim.keymap.set("n", "<leader>fz", function()
+  require("telesope.builtin").find_files({ cwd = "~" })
+end)
 
 --     keep cursor in center
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
