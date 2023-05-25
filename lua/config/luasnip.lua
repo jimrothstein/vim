@@ -1,7 +1,8 @@
 -- /home/jim/.config/nvim/lua/config/luasnip.lua
 -- REF:     https://github.com/sbulav/dotfiles/blob/master/nvim/lua/config/snippets.lua
 --
--- 2023-05-13; TODO: add if/then tosnippet sep
+-- 2023-05-13
+--; TODO: add if/then tosnippet sep, wyneed to manually load this ??
 --
 local ls = require("luasnip")
 -- some shorthands...
