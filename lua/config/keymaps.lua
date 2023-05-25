@@ -28,6 +28,9 @@ vim.keymap.set("n", "<leader>fz", function()
   require("telesope.builtin").find_files({ cwd = "~" })
 end)
 
+--  want ESC, CAPSLOCK to be instanteaous
+vim.keymap.set("i", "<ESC>", "<ESC> <nowait>")
+
 --     keep cursor in center
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
