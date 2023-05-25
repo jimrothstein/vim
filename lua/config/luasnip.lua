@@ -55,7 +55,6 @@ ls.add_snippets(nil, {
 -------------------------
 --
 --
---
 -- :h vim.bo.
 local ft = vim.bo.filetype
 --  :lua print(vim.bo.filetype)
