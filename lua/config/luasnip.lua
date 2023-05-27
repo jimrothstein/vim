@@ -1,6 +1,8 @@
 -- /home/jim/.config/nvim/lua/config/luasnip.lua
 -- REF:     https://github.com/sbulav/dotfiles/blob/master/nvim/lua/config/snippets.lua
 --
+-- 2023-05-26
+-- TODO:  lusnip not working at all.
 -- 2023-05-13
 --; TODO: add if/then tosnippet sep, wyneed to manually load this ??
 --
@@ -18,8 +20,8 @@ end
 local filename = function()
   return { vim.fn.expand("%:p") }
 end
-
-ls.add_snippets(nil, {
+--- ls.add_snippets(nil, {
+ls.add_snippets("all", {
   all = {
     snip({
       trig = "date_jr",

@@ -2,7 +2,9 @@ return {
   "L3MON4D3/LuaSnip",
   -- "rafamadriz/friendly-snippets",
   config = function()
-    local path = vim.fn.stdpath("config") .. "/snippets"
+    -- jr changed:
+    --    local path = vim.fn.stdpath("config") .. "/snippets"
+    local path = "~/.config/nvim/lua/config/luasnip.lua"
 
     -- require("luasnip.loaders.from_snipmate").lazy_load({
     -- 	paths = path,
