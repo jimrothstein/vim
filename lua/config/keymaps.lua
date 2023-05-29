@@ -24,6 +24,7 @@ local builtin = require("telescope.builtin")(
   --
 )
 
+--- Sets Root Dir to HOME
 vim.keymap.set("n", "<leader>fz", function()
   require("telesope.builtin").find_files({ cwd = "~" })
 end)
