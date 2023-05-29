@@ -46,6 +46,9 @@ local filename = function()
   return { vim.fn.expand("%:p") }
 end
 
+local filetype = function()
+  return { vim.inspect(vim.filetype.match({ buf = 0 })) }
+end
 ls.add_snippets("all", {
   s("triggerA", { t("Wow! Text!") }),
 
