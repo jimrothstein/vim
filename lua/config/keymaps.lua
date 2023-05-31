@@ -1,4 +1,4 @@
--- Keymaps are automatically loaded on the VeryLazy eventsudo luarocks install jsregexp
+-- Keymaps are automatically loaded on the VeryLazy event - sudo luarocks install jsregexp
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 --
 -- Additional keymaps here
@@ -7,8 +7,11 @@
 --
 --      NOTHING WORKS
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.e)
--- TODO:  > line 20, several good ex of "which-key", but ERRORs
-
+--
+-- TODO
+-- 31MAY2023
+--      > line 20, several good ex of "which-key", but ERRORs
+--      - see ~23, ESC should <nowait>,  BUT I see many errors `wait` in use.22
 -- local builtin = require("telescope.builtin")({
 -- vim.keymap.set("n", "ppf", builtin.find_files({}))
 
@@ -24,12 +27,13 @@
 --
 -- })
 
---- Sets Root Dir to HOME
+--- Sets Root Dir to HOME, gives ERROR TODO
 vim.keymap.set("n", "<leader>fz", function()
   require("telesope.builtin").find_files({ cwd = "~" })
 end)
 
 --  want ESC, CAPSLOCK to be instanteaous
+--  ARE YOU CAUSING ERRORS when I leave insert mode ?
 vim.keymap.set("i", "<ESC>", "<ESC> <nowait>")
 
 --     keep cursor in center
