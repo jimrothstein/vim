@@ -10,6 +10,10 @@ print("hello: nvim/config/options.lua")
 --          PUT jr options here !:
 --
 --
+-- $HOST is shell environmental var, set by initialize.zsh
+local HOST = os.getenv("HOST") --- which machine?
+print("LUA thinks I am using " .. vim.inspect(HOST))
+
 vim.g.mapleader = " "
 -- Primegean likes
 
@@ -18,7 +22,13 @@ vim.g.mapleader = " "
 
 vim.opt.relativenumber = true -- test only, already set to true by lazyv
 vim.opt.number = true
-vim.cmd([[ set background=light]])
+
+if HOST == "jim-ThinkPad-T480" then
+  vim.cmd([[ set background=light]])
+else
+  vim.cmd([[ set background=dark]]) -- acer-desktop
+end
+
 vim.cmd([[ set clipboard+=unnamedplus]])
 vim.cmd([[ syntax on]])
 vim.g.listchars = "tab:>-,space:="
