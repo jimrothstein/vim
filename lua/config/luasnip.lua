@@ -1,9 +1,12 @@
 -- /home/jim/.config/nvim/lua/config/luasnip.lua
--- REF:     https://github.com/sbulav/dotfiles/blob/master/nvim/lua/config/snippets.lua
 --
 -- REF:   luansip documentation (good examples)
 -- 2023-05-13; TODO: add if/then tosnippet sep
 --
+-- testng   -- benefit ??   does not load this file
+--2023-05-31
+require("luasnip.loaders.from_lua").load({ paths = "~/config/nvim/lua/config/luasnip.lua" })
+
 --  required abbrev
 local ls = require("luasnip")
 local s = ls.snippet
@@ -106,3 +109,4 @@ ls.add_snippets("all", { -- all file types
   }),
 })
 -------------------------
+--

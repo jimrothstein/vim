@@ -27,14 +27,21 @@
 --
 -- })
 
+--  easy ESC
+vim.keymap.set("i", "jj", "<ESC>")
+vim.keymap.set("i", "kk", "<ESC>")
+
+-- keeps prior word
+-- vim.keymap.set("x", '<leader>p', "\"_dP)
+
 --- Sets Root Dir to HOME, gives ERROR TODO
 vim.keymap.set("n", "<leader>fz", function()
   require("telesope.builtin").find_files({ cwd = "~" })
 end)
 
 --  want ESC, CAPSLOCK to be instanteaous
---  ARE YOU CAUSING ERRORS when I leave insert mode ?
-vim.keymap.set("i", "<ESC>", "<ESC> <nowait>")
+--  This causes CAUSING ERRORS when I leave insert mode ?
+-- vim.keymap.set("i", "<ESC>", "<ESC> <nowait>")
 
 --     keep cursor in center
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
