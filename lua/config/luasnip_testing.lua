@@ -41,14 +41,20 @@ end
 local filename = function()
   return { vim.fn.expand("%:p") }
 end
+-- troubleshooting print statemetns
+-- print(vim.inspect(vim.fn.stdpath("log"))) --  ~/.local/state/nvim/
+-- print(vim.inspect(vim.fn.stdpath("nvim")))
+-- print(vim.inspect(ls.get_snippet_filetypes())) --  "lua, all"
 
-ls.add_snippets("all", { -- all file types
-  all = {
-    -- simplest
-    s("triggerA", { t("Wow Text!") }),
-  },
-})
+return {
 
-if true then
-  return {}
-end
+  ls.add_snippets("all", { -- all file types
+    all = {
+      -- simplest
+      s("triggerA", { t("Wow Text!") }),
+    },
+  }),
+}
+--if true then
+--  return {}
+-- end
