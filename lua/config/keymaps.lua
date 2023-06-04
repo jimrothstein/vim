@@ -8,21 +8,21 @@
 --      NOTHING WORKS
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.e)
 -- TODO:  > line 20, several good ex of "which-key", but ERRORs
+-- needed?
+local tel = require("telescope")
 
-local builtin = require("telescope.builtin")(
-  -- vim.keymap.set("n", "ppf", builtin.find_files({}))
+-- vim.keymap.set("n", "ppf", builtin.find_files({}))
 
-  -- vim.keymap.set("n", "<Leader>ps", function()
-  -- builtin.grep_string({ search = vim.fn.input("Grep > ") })
-  -- end)
-  --
-  -- Primeagan -  reverses two lines (driving me crazy)
-  -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-  -- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- vim.keymap.set("n", "<Leader>ps", function()
+-- builtin.grep_string({ search = vim.fn.input("Grep > ") })
+-- end)
+--
+-- Primeagan -  reverses two lines (driving me crazy)
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-  --  open Telescope in $HOME
-  --
-)
+--  open Telescope in $HOME
+--
 
 --- Sets Root Dir to HOME
 vim.keymap.set("n", "<leader>fz", function()
