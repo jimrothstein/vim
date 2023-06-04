@@ -6,6 +6,7 @@
 -- testng   -- benefit ??   does not load this file
 --2023-05-31
 require("luasnip.loaders.from_lua").load({ paths = "~/config/nvim/lua/config/luasnip.lua" })
+require("luasnip.loaders.from_vscode").load()
 
 --  required abbrev
 local ls = require("luasnip")
