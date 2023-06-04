@@ -5,10 +5,10 @@
 --
 -- TAGS:    which-key, telescope.builtin
 --
---      NOTHING WORKS
--- vim.keymap.set("n", "<leader>pv", vim.cmd.e)
 --
 -- TODO
+-- 2023-06-03
+--      vim.keymap.set("n", "<leader>pv", vim.cmd.e)
 -- 31MAY2023
 --      > line 20, several good ex of "which-key", but ERRORs
 --      - see ~23, ESC should <nowait>,  BUT I see many errors `wait` in use.22
@@ -22,9 +22,6 @@
 -- Primeagan -  reverses two lines (driving me crazy)
 -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
---  open Telescope in $HOME
---
 -- })
 
 --  easy ESC
@@ -34,14 +31,13 @@ vim.keymap.set("i", "kk", "<ESC>")
 -- keeps prior word
 -- vim.keymap.set("x", '<leader>p', "\"_dP)
 
+--      required, not sure
+require("telescope")
+
 --- Sets Root Dir to HOME, gives ERROR TODO
 vim.keymap.set("n", "<leader>fz", function()
   require("telesope.builtin").find_files({ cwd = "~" })
 end)
-
---  want ESC, CAPSLOCK to be instanteaous
---  This causes CAUSING ERRORS when I leave insert mode ?
--- vim.keymap.set("i", "<ESC>", "<ESC> <nowait>")
 
 --     keep cursor in center
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
