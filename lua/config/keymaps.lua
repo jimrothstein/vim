@@ -7,22 +7,13 @@
 --
 --
 -- TODO
+-- 2023-06-04
+-- -    fixed a few errors,  fz remains
 -- 2023-06-03
 --      vim.keymap.set("n", "<leader>pv", vim.cmd.e)
 -- 31MAY2023
---      > line 20, several good ex of "which-key", but ERRORs
---      - see ~23, ESC should <nowait>,  BUT I see many errors `wait` in use.22
--- local builtin = require("telescope.builtin")({
--- vim.keymap.set("n", "ppf", builtin.find_files({}))
-
--- vim.keymap.set("n", "<Leader>ps", function()
--- builtin.grep_string({ search = vim.fn.input("Grep > ") })
--- end)
 --
--- Primeagan -  reverses two lines (driving me crazy)
--- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
--- })
+--
 
 --  easy ESC
 vim.keymap.set("i", "jj", "<ESC>")
@@ -32,12 +23,11 @@ vim.keymap.set("i", "kk", "<ESC>")
 -- vim.keymap.set("x", '<leader>p', "\"_dP)
 
 --      required, not sure
-require("telescope")
+-- require("telescope")
 
---- Sets Root Dir to HOME, gives ERROR TODO
-vim.keymap.set("n", "<leader>fz", function()
-  require("telesope.builtin").find_files({ cwd = "~" })
-end)
+-- Sets Root Dir to HOME, gives ERROR TODO
+local builtin = require("telescope.builtin")
+-- vim.keymap.set("n", "<leader>fz", builtin.find_files({ cwd = "~" }))
 
 --     keep cursor in center
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -45,7 +35,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 --  Stole from https://github.com/sum-rock/just-sum-nix/blob/master/homes/modules/neovim/lua/navigation.lua
 --
-
 --  ERROR
 -- require("which-key").register({
 --   w = {

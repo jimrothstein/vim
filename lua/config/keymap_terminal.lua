@@ -1,9 +1,6 @@
 --
 -- i stole this.
 --
--- Function for make mapping easier.
---
--- local map = require("utils").map
 
 -- Map leader key to space.
 vim.g.mapleader = " "
@@ -18,7 +15,8 @@ vim.keymap.set("n", "<A-h>", "<C-w><C-h>")
 vim.keymap.set("n", "<S-h>", ":call ResizeLeft(3)<CR><Esc>")
 vim.keymap.set("n", "<S-l>", ":call ResizeRight(3)<CR><Esc>")
 vim.keymap.set("n", "<S-k>", ":call ResizeUp(1)<CR><Esc>")
-vim.keymap.set("n", "<S-j>", ":call ResizeDown(1)<CR><Esc>")
+--  <S-j> is my concatinate key (2 lines)
+-- vim.keymap.set("n", "<S-j>", ":call ResizeDown(1)<CR><Esc>")
 
 -- Buffer switching.
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
@@ -42,8 +40,8 @@ function _G.set_terminal_keymaps()
   vim.keymap.set("t", "<S-l>", "<c-\\><C-n>:call ResizeRight(3)<CR>")
 end
 
---  open terminal
-vim.keymap.set("n", "<leader>tt", ":vsplit term://zsh<CR>")
+--  open terminal, in insert mode
+vim.keymap.set("n", "<leader>tt", ":vsplit term://zsh<CR>a")
 
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "term://*",
