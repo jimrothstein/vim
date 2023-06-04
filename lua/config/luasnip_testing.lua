@@ -1,3 +1,9 @@
+if true then
+  return {}
+end
+
+--  turn off while tyring to get this to work.
+--
 local ls = require("luasnip")
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -55,6 +61,3 @@ return {
     },
   }),
 }
---if true then
---  return {}
--- end
