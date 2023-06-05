@@ -19,6 +19,9 @@
 vim.keymap.set("i", "jj", "<ESC>")
 vim.keymap.set("i", "kk", "<ESC>")
 
+--  insert # --------...
+vim.keymap.set("n", "<leader>ic", "yypVr-I# ")
+
 -- keeps prior word
 -- vim.keymap.set("x", '<leader>p', "\"_dP)
 
