@@ -8,8 +8,13 @@
 require("luasnip.loaders.from_lua").load({ paths = "~/config/nvim/lua/config/luasnip.lua" })
 require("luasnip.loaders.from_vscode").load()
 
+-- list?
 --  required abbrev
 local ls = require("luasnip")
+---------------------------------- Works !
+--  13,16so
+print(vim.inspect(ls.available()))
+----------------------------------
 local s = ls.snippet
 local sn = ls.snippet_node
 local isn = ls.indent_snippet_node

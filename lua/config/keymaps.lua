@@ -7,6 +7,8 @@
 --
 --
 -- TODO
+-- 2023-06-05
+-- -    LazyVim includes several keymaps!   I maybe duplicating !
 -- 2023-06-04
 -- -    fixed a few errors,  fz remains
 -- 2023-06-03
@@ -20,7 +22,7 @@ vim.keymap.set("i", "jj", "<ESC>")
 vim.keymap.set("i", "kk", "<ESC>")
 
 --  insert # --------...
-vim.keymap.set("n", "<leader>ic", "yypVr-I# ")
+vim.keymap.set("n", "<leader>ic", "yypVr-I# <ESC>")
 
 -- keeps prior word
 -- vim.keymap.set("x", '<leader>p', "\"_dP)
