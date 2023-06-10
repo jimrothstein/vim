@@ -8,6 +8,7 @@
 --
 -- TODO
 -- 2023-06-05
+-- -    virtualedit mode?   to position cursor on EMPTY line
 -- -    LazyVim includes several keymaps!   I maybe duplicating !
 -- 2023-06-04
 -- -    fixed a few errors,  fz remains
@@ -20,6 +21,10 @@ vim.keymap.set("i", "kk", "<ESC>")
 
 --  insert # --------...
 vim.keymap.set("n", "<leader>ic", "yypVr-I# <ESC>")
+
+--TODO:  virtualedit mode
+--vim.keymap.set("n", "<leader><Tab>", "12i<TAB>##")
+--  move cursor 12 tabs, insert ##
 
 -- keeps prior word
 -- vim.keymap.set("x", '<leader>p', "\"_dP)
