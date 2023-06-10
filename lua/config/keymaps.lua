@@ -96,6 +96,7 @@ vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 ---------------------- END ALT-Terminal ----------------------
+--      FUTURE
 --
 --  Stole from https://github.com/sum-rock/just-sum-nix/blob/master/homes/modules/neovim/lua/navigation.lua
 --

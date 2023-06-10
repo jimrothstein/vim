@@ -6,13 +6,18 @@
 --
 --  REF         ThePrimeagen
 --
-print("hello: nvim/config/options.lua")
+if false then
+  print("hello: nvim/config/options.lua")
+end
 --          PUT jr options here !:
 --
 --
+
 -- $HOST is shell environmental var, set by initialize.zsh
 local HOST = os.getenv("HOST") --- which machine?
-print("LUA thinks I am using " .. vim.inspect(HOST))
+if true then
+  print("LUA thinks I am using " .. vim.inspect(HOST))
+end
 
 vim.g.mapleader = " "
 -- Primegean likes
@@ -20,6 +25,7 @@ vim.g.mapleader = " "
 -- vim.opt.guicursor = "" (I don't like)
 -- remains block in insert mode
 
+vim.opt.numberwidth = 3
 vim.opt.relativenumber = true -- test only, already set to true by lazyv
 vim.opt.number = true
 
