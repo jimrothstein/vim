@@ -73,10 +73,11 @@ local function set_terminal_keymaps()
   vim.keymap.set("t", "<A-k>", "<c-\\><c-n><c-w>k")
   vim.keymap.set("t", "<A-l>", "<c-\\><c-n><c-w>l")
 
-  vim.keymap.set("t", "<S-h>", "<c-\\><C-n>:call ResizeLeft(3)<CR>")
-  vim.keymap.set("t", "<S-j>", "<c-\\><C-n>:call ResizeDown(1)<CR>")
-  vim.keymap.set("t", "<S-k>", "<c-\\><C-n>:call ResizeUp(1)<CR>")
-  vim.keymap.set("t", "<S-l>", "<c-\\><C-n>:call ResizeRight(3)<CR>")
+  --   TODO:  interfering with navigation
+  --  vim.keymap.set("t", "<S-h>", "<c-\\><C-n>:call ResizeLeft(3)<CR>")
+  --  vim.keymap.set("t", "<S-j>", "<c-\\><C-n>:call ResizeDown(1)<CR>")
+  --  vim.keymap.set("t", "<S-k>", "<c-\\><C-n>:call ResizeUp(1)<CR>")
+  --  vim.keymap.set("t", "<S-l>", "<c-\\><C-n>:call ResizeRight(3)<CR>")
 end
 
 --  open terminal, in insert mode
