@@ -1,10 +1,9 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
 --
---  7JUNE 2023
---  jr: removed this line (so everything is loading !)
---  PURPOSE: following Traap's videos; Later will turn off plugins I do not want.
--- if true then return {} end
+--  11 JUNE 2023
+--  Nothing loads;  later can following Traap's videos; Later will turn off plugins I do not want.
+if true then return {} end
 
 -- every spec file under config.plugins will be loaded automatically by lazy.nvim
 --
