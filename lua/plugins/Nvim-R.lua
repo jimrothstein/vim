@@ -6,11 +6,15 @@ vim.cmd([[ syntax on ]])
 vim.g.R_assign_map = "2"
 
 return {
-  -- add Nvim-R
-  "jalvesaq/Nvim-R",
-}
+  {
+    -- add Nvim-R
+    "jalvesaq/Nvim-R",
+  },
 
--- need "__" to get <-
--- vim.cmd[[ let R_assign = 2]]
---vim.g.R_assign_map = '<M-->'
---
+  -- https://github.com/jalvesaq/cmp-nvim-r ?
+
+  -- need "__" to get <-
+  -- vim.cmd[[ let R_assign = 2]]
+  --vim.g.R_assign_map = '<M-->'
+  --
+}
