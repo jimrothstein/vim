@@ -1,3 +1,5 @@
+15JUNE - OLD, save only for examples.
+
 # 💤 LazyVim
 
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
